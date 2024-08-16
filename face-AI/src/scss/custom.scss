@@ -1,0 +1,29 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$grid-breakpoints: (
+        xs: 0,          //mobile
+        sm: 576px,      //big mobile
+        md: 769px,      //tablet
+        lg: 1024px,     //small-screen
+        xl: 1440px,     //big-screeen
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 704px,
+        lg: 896px,
+        xl: 1320px,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.container {
+        @include media-breakpoint-up(sm) {
+                @include make-container(0px);
+        }
+        @include media-breakpoint-down(sm) {
+                @include make-container(32px);  
+        }
+}

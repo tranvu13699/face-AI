@@ -30,10 +30,10 @@
             <a class="nav-link" :class="{'active' : activeContent === 'emotion-face'}" 
               @click="setActive('emotion-face')">Emotion Face</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" :class="{'active' : activeContent === 'emotion-face-demo'}" 
-              @click="setActive('emotion-face-demo')">Emotion Face Demo</a>
-          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" :class="{'active' : activeContent === 'detect-face-websocket'}" 
+              @click="setActive('detect-face-websocket')">Detect Face WebSocket</a>
+          </li> -->
         </ul>
         <!-- <div id="face-recognition" class="content" 
           v-if="activeContent === 'face-recognition'">
@@ -60,10 +60,10 @@
           v-if="activeContent === 'emotion-face'">
           <EmotionFace :isActive="activeContent === 'emotion-face'"/>
         </div>
-        <div id="emotion-face-demo" class="content"
-          v-if="activeContent === 'emotion-face-demo'">
-          <EmotionFaceDemo :isActive="activeContent === 'emotion-face-demo'"/>
-        </div>
+        <!-- <div id="detect-face-websocket" class="content"
+          v-if="activeContent === 'detect-face-websocket'">
+          <DetectFaceWebSocket :isActive="activeContent === 'detect-face-websocket'"/>
+        </div> -->
       </div>
     </div>
 </template>
@@ -79,6 +79,7 @@ import DetectionFace from './views/DetectionFace.vue';
 import RegisterFace from './views/RegisterFace.vue';
 import EmotionFace from './views/EmotionFace.vue';
 import EmotionFaceDemo from './views/EmotionFaceDemo.vue';
+import DetectFaceWebSocket from './views/DetectFaceWebSocket.vue';
 
 //tab
 const activeContent = ref("face-matching")
